@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# example Script_name ssh_port
+# bash modify_ssh.sh 65555  
 set -e
 
 # 检查root权限
