@@ -48,7 +48,10 @@ PasswordAuthentication no
   - 防火墙开放新端口:
     # Firewalld
 +   firewall-cmd --permanent --add-port=<YOUR_PORT>/tcp
-    
+
+    # Iptables
++   iptables -D INPUT -p tcp --dport <YOUR_PORT> -j ACCEPT
+
   - SELinux 策略调整 (如启用):
 +   semanage port -a -t ssh_port_t -p tcp <YOUR_PORT>
     
