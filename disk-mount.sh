@@ -51,7 +51,6 @@ mount -a || { echo "挂载失败，检查/etc/fstab配置"; exit 1; }
 df -h /data
 exit
 EOF
-echo "$IP 磁盘挂载成功" >> /tmp/disk_log
 
     # 检查SSH命令退出状态
     if [ ${PIPESTATUS[0]} -ne 0 ]; then
